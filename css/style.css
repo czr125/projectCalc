@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: Helvetica;
 }
-
 body {
     background-color: #333;
     display: flex;
@@ -35,8 +34,7 @@ body {
 }
 
 
-#previous-operation,
-#current-operation {
+#previous-operation, #current-operation {
     min-height: 1.6em;
     overflow-wrap: break-word;
     padding: 0.2em;
@@ -44,11 +42,13 @@ body {
 
 #previous-operation {
     color: #777;
+    overflow-wrap: break-word;
 }
 
 #current-operation {
     font-size: 3em;
     font-weight: 700;
+    overflow-wrap: break-word;
 }
 
 #buttons-container{

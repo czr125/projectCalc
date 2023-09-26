@@ -83,3 +83,7 @@ body {
 #buttons-container #equal-btn{
     background-color: #1a8dffab;
 }
+
+#buttons-container #equal-btn:hover{
+    background-color: #1a8dff;
+}

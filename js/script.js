@@ -55,11 +55,17 @@ class Calculator {
                 this.updateScreen(operationValue, operation, current, previous)
                 break
             case "**":
-                operationValue = current.Math.pow()
-                this.updateScreen(operationValue, operation, current)
+                function exponenciacaoAoQuadrado(current) {
+                    return Math.pow(current, 2);
+                    }
+                operationValue = exponenciacaoAoQuadrado()
+                this.updateScreen(operationValue, operation, current, previous)
                 break
             case "**n":
-                operationValue = previous ** current
+                function elevadoAEnesimaPotencia(previous, current) {
+                    return Math.pow(previous, current);
+                    }
+                operationValue = elevadoAEnesimaPotencia()
                 this.updateScreen(operationValue, operation, current, previous)
                 break
             case "x!":
@@ -69,20 +75,29 @@ class Calculator {
                       fatorial *= i;
                     }
                     return fatorial;
-                }
+                    }
                 operationValue = fatorial(current)
                 this.updateScreen(operationValue, operation, current, previous)
                 break
             case "log2":
-                operationValue = Math.log2(current)
+                function logBase2(current) {
+                    return Math.log2(current);
+                    }
+                operationValue = logBase2()
                 this.updateScreen(operationValue, operation, current, previous)
                 break
             case "log10":
-                operationValue = previous * current
+                function logBase10(current) {
+                    return Math.log10(current);
+                    }
+                operationValue = logBase10()
                 this.updateScreen(operationValue, operation, current, previous)
                 break
             case "logn":
-                operationValue = previous * current
+                function logBaseN(previous,current) {
+                    return Math.log(previous) / Math.log(current);
+                    }
+                operationValue = logBaseN()
                 this.updateScreen(operationValue, operation, current, previous)
                 break
             case "DEL":
@@ -125,7 +140,7 @@ class Calculator {
     }
     // Change math operation
     changeOperation(operation) {
-        const mathOperations = ["*", "/", "+", "-", "**2", "**n", "x!", "log2", "log10", "logn"]
+        const mathOperations = ["*", "/", "+", "-", "**", "**n", "x!", "log2", "log10", "logn"]
 
         if(!mathOperations.includes(operation)) {
             return
@@ -156,9 +171,7 @@ class Calculator {
 
         this.processOperation(operation)
     }
-
 }
-
 
 const calc = new Calculator(previousOperationText, currentOperationText)
 buttons.forEach((btn) => {

@@ -54,6 +54,37 @@ class Calculator {
                 operationValue = previous * current
                 this.updateScreen(operationValue, operation, current, previous)
                 break
+            case "**":
+                operationValue = current.Math.pow()
+                this.updateScreen(operationValue, operation, current)
+                break
+            case "**n":
+                operationValue = previous ** current
+                this.updateScreen(operationValue, operation, current, previous)
+                break
+            case "x!":
+                function fatorial(current) {
+                    let fatorial = 1;
+                    for (let i = 2; i <= current; i++) {
+                      fatorial *= i;
+                    }
+                    return fatorial;
+                }
+                operationValue = fatorial(current)
+                this.updateScreen(operationValue, operation, current, previous)
+                break
+            case "log2":
+                operationValue = Math.log2(current)
+                this.updateScreen(operationValue, operation, current, previous)
+                break
+            case "log10":
+                operationValue = previous * current
+                this.updateScreen(operationValue, operation, current, previous)
+                break
+            case "logn":
+                operationValue = previous * current
+                this.updateScreen(operationValue, operation, current, previous)
+                break
             case "DEL":
                 this.processDelOperator()
                 break
@@ -94,7 +125,7 @@ class Calculator {
     }
     // Change math operation
     changeOperation(operation) {
-        const mathOperations = ["*", "/", "+", "-"]
+        const mathOperations = ["*", "/", "+", "-", "**2", "**n", "x!", "log2", "log10", "logn"]
 
         if(!mathOperations.includes(operation)) {
             return

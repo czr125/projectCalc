@@ -58,14 +58,14 @@ class Calculator {
                 function exponenciacaoAoQuadrado(current) {
                     return Math.pow(current, 2);
                     }
-                operationValue = exponenciacaoAoQuadrado()
+                operationValue = exponenciacaoAoQuadrado(current)
                 this.updateScreen(operationValue, operation, current, previous)
                 break
             case "**n":
                 function elevadoAEnesimaPotencia(previous, current) {
                     return Math.pow(previous, current);
                     }
-                operationValue = elevadoAEnesimaPotencia()
+                operationValue = elevadoAEnesimaPotencia(previous, current)
                 this.updateScreen(operationValue, operation, current, previous)
                 break
             case "x!":

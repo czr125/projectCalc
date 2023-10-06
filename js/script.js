@@ -40,8 +40,7 @@ const getKeyType = key => {
     action === 'factorial' ||
     action === 'logaritmalTwo' ||
     action === 'logaritmalTen' ||
-    action === 'logaritmalN2' ||
-    action === 'logaritmalN10' 
+    action === 'logaritmaln'  
   ) return 'operator'
   // For everything else, return the action
   return action

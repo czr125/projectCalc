@@ -9,40 +9,37 @@
     <title>Calculator</title>
 </head>
 <body>
-    <div id="calc">
-        <h3>Calculator</h3>
-        <div id="operations">
-            <div id="previous-operation"></div>
-            <div id="current-operation"></div>
+    <div class="container">
+        <div class="calculator">
+          <div class="calculator__display">0</div>
+    
+          <div class="calculator__keys">
+            <button class="key--operator" data-action="add">+</button>
+            <button class="key--operator" data-action="subtract">-</button>
+            <button class="key--operator" data-action="multiply">&times;</button>
+            <button class="key--operator" data-action="divide">÷</button>
+            <button class="key--operator" data-action="exponencialByTwo">**</button>
+            <button class="key--operator" data-action="logaritmalTwo">log2</button>
+            <button class="key--operator" data-action="exponencial">**N</button>
+            <button class="key--operator" data-action="logaritmalTen">log10</button>
+            <button class="key--operator" data-action="logaritmaln">logN</button>
+            <button class="key--operator" data-action="factorial">X!</button>
+            <button class="key--numbers" lineT7>7</button>
+            <button class="key--numbers" lineT8>8</button>
+            <button class="key--numbers" lineT9>9</button>
+            <button class="key--numbers" lineT4>4</button>
+            <button class="key--numbers" lineT5>5</button>
+            <button class="key--numbers" lineT6>6</button>
+            <button class="key--numbers" lineF1>1</button>
+            <button class="key--numbers" lineF2>2</button>
+            <button class="key--numbers" lineF3>3</button>
+            <button class="outros" data-action="clear" bottom2>AC</button>
+            <button class="key--numbers" bottom1>0</button>
+            <button class="outros" data-action="decimal" bottom0>.</button>
+            <button class="key--equal" data-action="calculate">=</button>
+          </div>
         </div>
-        <div id="buttons-container">
-            <button class="operation-btn">CE</button>
-            <button class="operation-btn">C</button>
-            <button class="operation-btn">DEL</button>
-            <button class="operation-btn">/</button>
-            <button class="operation-cient-btn">**</button> <!--- Elevado á segunda potência -->
-            <button class="operation-cient-btn">**n</button> <!-- Elevado á enésima potencia (N) -->
-            <button class="number-btn">7</button>
-            <button class="number-btn">8</button>
-            <button class="number-btn">9</button>
-            <button class="operation-btn">*</button>
-            <button class="operation-cient-btn">x!</button> <!-- Fatorial -->
-            <button class="operation-cient-btn">log2</button> <!-- Log na base 2 -->
-            <button class="number-btn">4</button>
-            <button class="number-btn">5</button>
-            <button class="number-btn">6</button>
-            <button class="operation-btn">-</button>
-            <button class="operation-cient-btn">log10</button> <!-- Log na base 10 -->
-            <button class="operation-cient-btn">logn</button> <!-- Log na base N -->
-            <button class="number-btn">1</button>
-            <button class="number-btn">2</button>
-            <button class="number-btn">3</button>
-            <button class="operation-btn">+</button>
-            <button id="number-0-btn">0</button>
-            <button id="dot-btn">.</button>
-            <button id="equal-btn">=</button>
-        </div>
-    </div>
+      </div>
     <script src="/js/script.js"></script>
 </body>
 </html>

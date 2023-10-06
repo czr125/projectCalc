@@ -13,18 +13,19 @@ function logaritmize(firstNum, secondNum) {
 }
 
 const calculate = (n1, operator, n2) => {
-  const firstNum = parseFloat(n1)
-  const secondNum = parseFloat(n2)
-  if (operator === 'add') return firstNum + secondNum
-  if (operator === 'subtract') return firstNum - secondNum
-  if (operator === 'multiply') return firstNum * secondNum
-  if (operator === 'divide') return firstNum / secondNum
-  if (operator === 'exponencialByTwo') return firstNum ** 2
-  if (operator === 'exponencial') return firstNum ** secondNum
-  if (operator === 'factorial') return factorialize(firstNum)
-  if (operator === 'logaritmalTwo') return Math.log2(firstNum)
-  if (operator === 'logaritmalTen') return Math.log10(firstNum)
-  if (operator === 'logartimaln') return logaritmize(firstNum, secondNum)
+  const firstNum = parseFloat(n1).toFixed(3)
+  const secondNum = parseFloat(n2).toFixed(3)
+  if (operator === 'add') return (firstNum + secondNum).toFixed(3)
+  if (operator === 'subtract') return (firstNum - secondNum).toFixed(3)
+  if (operator === 'multiply') return (firstNum * secondNum).toFixed(3)
+  if (operator === 'divide') return (firstNum / secondNum).toFixed(3)
+  if (operator === 'sqrt') return (Math.sqrt(firstNum)).toFixed(3)
+  if (operator === 'exponencialByTwo') return (firstNum ** 2).toFixed(3)
+  if (operator === 'exponencial') return (firstNum ** secondNum).toFixed(3)
+  if (operator === 'factorial') return (factorialize(firstNum)).toFixed(3)
+  if (operator === 'logaritmalTwo') return (Math.log2(firstNum)).toFixed(3)
+  if (operator === 'logaritmalTen') return (Math.log10(firstNum)).toFixed(3)
+  if (operator === 'logartimaln') return (logaritmize(firstNum, secondNum)).toFixed(3)
 }
 
 const getKeyType = key => {
@@ -35,6 +36,7 @@ const getKeyType = key => {
     action === 'subtract' ||
     action === 'multiply' ||
     action === 'divide' ||
+    action === 'sqrt' ||
     action === 'exponencialByTwo' ||
     action === 'exponencial' ||
     action === 'factorial' ||

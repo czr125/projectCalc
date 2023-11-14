@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  proxy:
+    image: calc-page-nginx
+    build:
+      context: .
+    ports:
+      - "30001:80"
+    networks:
+      - calc-page
+
+networks: 
+  calc-page:
+    driver: bridge
+  

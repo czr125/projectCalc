@@ -1,7 +1,7 @@
 <h1 align="center"> Cientific Calculator Project </h1>
 
 <p align="center">
-Site feito para simular uma calculadora científica, o qual foi realizado por mim, Cezar Augusto.
+Site feito para simular uma calculadora científica, o qual foi realizado em trabalho universitário.
 </p>
 
 <p align="center">
